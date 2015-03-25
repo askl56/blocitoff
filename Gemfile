@@ -4,7 +4,7 @@ gem 'formtastic'
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem "bcrypt"
-
+gem 'zapata', groups: %w(development test)
 gem 'puma', group: :production
 gem 'thin', group: :development
 

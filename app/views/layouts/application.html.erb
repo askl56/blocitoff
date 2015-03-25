@@ -10,23 +10,36 @@
 
 </head>
 <body>
-
-<div class="container-fluid">
-	<% if current_user %>
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Blocitoff</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">ToDo Lists</a></li>
+    </ul>
+    <p class="navbar-text pull-right"> | 
+    <% if current_user %>
 	Logged in as <%=current_user.email  %>
 	<%= link_to "Log Out", logout_path %>
 	<% else %>
 	<%= link_to "Sign Up", signup_path %> or
 	<%= link_to "Log In", login_path %>
-	<% end %>
+	<% end %>/a></p>
+  </div>
+</div
+
+<div class="container-fluid">
 </div>
 
 <% flash.each do |name, msg| %>
 	<%= content_tag :div, msg, id: "flash_#{name}" %>
 <% end %>
 
-<div class="container">
-	<%= yield %>
+<div class="jumbotron">
+	<div class="container">
+		<%= yield %>
+	</div>
 </div>
 
 
