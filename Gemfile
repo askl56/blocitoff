@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'formtastic'
 gem 'bootstrap-sass'
 gem 'simple_form'
+gem "bcrypt"
 
 gem 'puma', group: :production
 gem 'thin', group: :development

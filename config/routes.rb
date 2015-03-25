@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   
+  get 'sessions/new'
+
+  resources :users
+  resources :sessions
+
   resources :todo_lists do
     resources :todo_items do
       member do
