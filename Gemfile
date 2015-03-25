@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'formtastic'
-
+gem 'bootstrap-sass'
 gem 'simple_form'
 
 gem 'puma', group: :production
