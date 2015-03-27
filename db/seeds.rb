@@ -1,21 +1,20 @@
 require 'faker'
 
 5.times do
-  todo_lists.create!(
+  TodoList.create!(
     title: Faker::Lorem.sentence,
-    body: Faker::Lorem.paragraph
+    description: Faker::Lorem.paragraph
   )
 end
-todo_lists = Todo_list.all
+todo_lists = TodoList.all
 
 30.times do
-  todo_items.create!(
-    title: Faker::Lorem.sentence,
-    body: Faker::Lorem.paragraph
+  TodoItem.create!(
+  	content: Faker::Lorem.sentence
   )
 end
-todo_item = Todo_item.all
+todo_item = TodoItem.all
 
 puts "Seed finished"
-puts "#{Todo_list.count} to-do lists created"
-puts "#{Todo_item.count} to-do items created"
+puts "#{TodoList.count} to-do lists created"
+puts "#{TodoItem.count} to-do items created"
