@@ -39,5 +39,4 @@ module ApplicationHelper
       "#{page_title} | #{site_name}"
     end
   end
-
 end

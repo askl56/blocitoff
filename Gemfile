@@ -7,6 +7,9 @@ gem "bcrypt"
 gem 'zapata', groups: %w(development test)
 gem 'puma', group: :production
 gem 'thin', group: :development
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
 
 group :test do
   gem 'rspec-rails'
