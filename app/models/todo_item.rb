@@ -4,7 +4,7 @@ class TodoItem < ActiveRecord::Base
   def completed?
     !completed_at.blank?
   end
-  
+
   def days_left
     (DateTime.now.to_date - created_at.to_date).to_i
   end
