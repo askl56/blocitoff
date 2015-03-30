@@ -6,3 +6,12 @@
  * require_tree .
 */
 @import "bootstrap_and_overrides";
+
+.main-container {
+	margin-top: 60px;
+}
+
+.user-info {
+	padding: 15px;
+	color: rgb(119, 119, 119);
+}
