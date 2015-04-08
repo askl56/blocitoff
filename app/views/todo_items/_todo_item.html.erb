@@ -1,35 +1,19 @@
-<div class="row">
-	<% if todo_item.completed? %>
-		<div class="complete col-xs-4">
-			<%= link_to complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch do %>
-				<i style="opacity: 0.4;" class="fa fa-check"></i>
-			<% end %>
-		</div>
-		<div class="todo_item col-xs-4">
-			<p style="opacity: 0.4;"><strike><%= todo_item.content %></strike></p>
-		</div>
-		<div class="trash col-xs-4">
-			<%= link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } do %>
-				<i class="fa fa-trash"></i>
-			<% end %>
-		</div>
-	<% else %>
-		<div class="complete col-xs-4">
+<div class="row <%= todo_item.completed? ? 'completed' : '' %>">
+		<div class="complete col-xs-3">
 			<%= link_to complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch do %>
 				<i class="fa fa-check"></i>
 			<% end %>
 		</div>
-		<div class="todo_item col-xs-4">
+		<div class="todo_item col-xs-3">
 			<p><%= todo_item.content %></p>
 		</div>
-		<div class="days_left col-xs-4">
-			<p><%= todo_item.days_left %></p>
+		<div class="days_left col-xs-3">
+			<p>You have <%= pluralize(todo_item.days_left, "day") %> remaining.</p>
 		</div>
 
-		<div class="trash col-xs-4">
+		<div class="trash col-xs-3">
 			<%= link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } do %>
-				<i class="fa-trash"></i>
+				<i class="fa fa-trash"></i>
 			<% end %>
 		</div>
-	<% end %>
 </div>
