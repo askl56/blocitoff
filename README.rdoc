@@ -1,3 +1,5 @@
 == README
 
+[![Build Status](https://travis-ci.org/askl56/blocitoff.svg?branch=master)](https://travis-ci.org/askl56/blocitoff)
+
 An exploding todo list application made using Ruby on Rails
