@@ -1,7 +1,5 @@
 class TodoListsController < ApplicationController
-  before_action :authorize, only: [:create, :destroy, :update, :show, :edit]
   before_action :set_todo_list, only: [:show, :edit, :update, :destroy]
-
 
   def index
     @todo_lists = TodoList.all

@@ -14,7 +14,7 @@ class TodoItemsController < ApplicationController
 		else
 			flash[:error] = "ToDo List item could not be deleted."
 		end
-		redirect_to @todo_list
+		head :no_content
 	end
 
 	def complete
@@ -33,6 +33,6 @@ class TodoItemsController < ApplicationController
 	end
 
 	def todo_item_params
-		params(:todo_item).permit(:content)
+		params.require(:todo_item).permit(:content)
 	end
 end
