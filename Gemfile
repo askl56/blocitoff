@@ -13,7 +13,7 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 gem 'faker'
 gem 'whenever', :require => false
 gem 'regressor', git: 'https://github.com/ndea/regressor.git', branch: 'master'
-
+gem 'active_model_serializers'
 
 group :test do
   gem 'rspec-rails'
