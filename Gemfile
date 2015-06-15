@@ -14,6 +14,7 @@ gem 'faker'
 gem 'whenever', :require => false
 gem 'regressor', git: 'https://github.com/ndea/regressor.git', branch: 'master'
 gem 'active_model_serializers'
+gem 'rubocop'
 
 group :test do
   gem 'rspec-rails'
