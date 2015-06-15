@@ -1,33 +1,32 @@
 module ApplicationHelper
-
   def site_name
     # Change the value below between the quotes.
-    "Blocitoff"
+    'Blocitoff'
   end
 
   def site_url
     if Rails.env.production?
       # Place your production URL in the quotes below
-      "http://http://www.example.com/"
+      'http://http://www.example.com/'
     else
       # Our dev & test URL
-      "http://localhost:3000"
+      'http://localhost:3000'
     end
   end
 
   def meta_author
     # Change the value below between the quotes.
-    "Andrew Scott"
+    'Andrew Scott'
   end
 
   def meta_description
     # Change the value below between the quotes.
-    "A ToDo list"
+    'A ToDo list'
   end
 
   def meta_keywords
     # Change the value below between the quotes.
-    "Add your keywords here"
+    'Add your keywords here'
   end
 
   # Returns the full title on a per-page basis.

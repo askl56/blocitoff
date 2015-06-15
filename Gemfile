@@ -3,15 +3,15 @@ source 'https://rubygems.org'
 gem 'formtastic'
 gem 'bootstrap-sass'
 gem 'simple_form'
-gem "bcrypt"
+gem 'bcrypt'
 gem 'zapata', groups: %w(development test)
 gem 'puma', group: :production
 gem 'thin', group: :development
-gem "therubyracer"
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'therubyracer'
+gem 'less-rails' # Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'faker'
-gem 'whenever', :require => false
+gem 'whenever', require: false
 gem 'regressor', git: 'https://github.com/ndea/regressor.git', branch: 'master'
 gem 'active_model_serializers'
 gem 'rubocop'

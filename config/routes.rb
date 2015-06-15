@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   namespace :api do
     resources :todo_lists do
       resources :todo_items, only: [:create, :update, :destroy]
@@ -21,6 +20,5 @@ Rails.application.routes.draw do
     end
   end
 
-
-  root "todo_lists#index"
+  root 'todo_lists#index'
 end

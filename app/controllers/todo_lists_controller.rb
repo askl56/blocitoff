@@ -50,13 +50,12 @@ class TodoListsController < ApplicationController
   end
 
   private
-    
-    def set_todo_list
-      @todo_list = TodoList.find(params[:id])
-    end
 
-    
-    def todo_list_params
-      params.require(:todo_list).permit(:title, :description)
-    end
+  def set_todo_list
+    @todo_list = TodoList.find(params[:id])
+  end
+
+  def todo_list_params
+    params.require(:todo_list).permit(:title, :description)
+  end
 end

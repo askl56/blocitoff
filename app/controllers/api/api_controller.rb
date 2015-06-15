@@ -4,10 +4,7 @@ module Api
     protect_from_forgery with: :null_session
     before_filter :authenticate
 
-    def current_user
-      @current_user
-    end
-
+    attr_reader :current_user
 
     def authenticate
       Rails.logger.info "API authentication:#{email} #{password}"
@@ -16,10 +13,9 @@ module Api
         Rails.logger.info "Logging in #{user.inspect}"
         true
       else
-        Rails.logger.warn "No valid credentials"
+        Rails.logger.warn 'No valid credentials'
         false
       end
     end
-
   end
 end
