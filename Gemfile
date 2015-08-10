@@ -16,6 +16,7 @@ gem 'whenever', require: false
 gem 'regressor', git: 'https://github.com/ndea/regressor.git', branch: 'master'
 gem 'active_model_serializers'
 gem 'rubocop'
+gem 'annotate'
 
 group :test do
   gem 'rspec-rails'
